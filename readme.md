@@ -2,7 +2,6 @@
  - PlatformInfo 
    - Generic 
      - MLB 
-     - SystemProductName
      - SystemSerialNumber
      - SystemUUID
 
@@ -19,7 +18,7 @@ OpenCore-Legacy-Patcher - Post-install Root Patch - Start Root Patching
   - MSI B760M MORTAR MAX WIFI
     - Ethernet: Realtek RTL8125B PCI Express 2.5 Gigabit Ethernet
     - Audio Codec: Realtek ALC897 Codec
-    - Wireless & Bluetooth: FENVi T919 (BCM94360CD) 1300Mbps|867Mbps
+- **Wireless & Bluetooth**: FENVi T919 (BCM94360CD) 1300Mbps|867Mbps
 - **RAM:** 
   - A-DATA (AX5U6000C3616G-B) DDR5 6000 16GB*2
 - **CPU:** Intel Core i9 13900K (iGPU not working)
@@ -92,9 +91,10 @@ MSI B760M MORTAR MAX WIFI ver **7E01vHD** build 2025-03-20 [BIOS](https://www.ms
   -  After wake ,bluetooth will be unnormal. 
   -  Turn off and then turn on Bluetooth switch will let bluetooth work again.
   -  You can use sleepwatcher to auto switch Bluetooth
-      -  brew install sleepwatcher blueutil
-         brew services start sleepwatcher
-         echo '/usr/local/bin/blueutil -p 0' > ~/.sleep
-         echo '/usr/local/bin/blueutil -p 1' > ~/.wakeup
-         chmod +x ~/.sleep ~/.wakeup
-
+```zsh
+      brew install sleepwatcher blueutil
+      brew services start sleepwatcher
+      echo '/usr/local/bin/blueutil -p 0' > ~/.sleep
+      echo '/usr/local/bin/blueutil -p 1' > ~/.wakeup
+      chmod +x ~/.sleep ~/.wakeup
+```
